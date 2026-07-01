@@ -22,6 +22,8 @@
   ·
   <a href="#local-setup">Local Setup</a>
   ·
+  <a href="#api-endpoint">API Endpoint</a>
+  ·
   <a href="#api-reference">API Reference</a>
   ·
   <a href="#deployment">Deployment</a>
@@ -249,6 +251,23 @@ Create `frontend/.env`:
 VITE_API_BASE_URL=http://localhost:5000/api
 ```
 
+## API Endpoint
+
+TaskFlow uses one backend API base endpoint for all frontend requests. The frontend reads this value from `VITE_API_BASE_URL`, so local and production deployments can point to different backend hosts without changing source code.
+
+| Environment | Endpoint |
+| --- | --- |
+| Local backend server | `http://localhost:5000` |
+| Local API base URL | `http://localhost:5000/api` |
+| Local health check | `http://localhost:5000/health` |
+| Production API base URL | `https://your-backend-url.com/api` |
+
+For local development, keep this in `frontend/.env`:
+
+```env
+VITE_API_BASE_URL=http://localhost:5000/api
+```
+
 ## API Reference
 
 Base URL:
@@ -431,16 +450,6 @@ LOG_LEVEL=info
 ```
 
 Set `CLIENT_URL` to the exact deployed frontend origin so CORS allows production requests.
-
-## Screenshots
-
-Add screenshots after deployment:
-
-```text
-docs/screenshots/dashboard.png
-docs/screenshots/task-details.png
-docs/screenshots/auth.png
-```
 
 ## Roadmap
 
