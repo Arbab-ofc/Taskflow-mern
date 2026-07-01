@@ -18,6 +18,8 @@
 <p align="center">
   <a href="#features">Features</a>
   ·
+  <a href="#live-demo">Live Demo</a>
+  ·
   <a href="#tech-stack">Tech Stack</a>
   ·
   <a href="#local-setup">Local Setup</a>
@@ -32,6 +34,15 @@
 </p>
 
 ---
+
+## Live Demo
+
+| Service | URL |
+| --- | --- |
+| Frontend | [https://taskflow-mern-two.vercel.app](https://taskflow-mern-two.vercel.app) |
+| Backend | [https://taskflow-mern-iqas.onrender.com](https://taskflow-mern-iqas.onrender.com) |
+| API Base URL | [https://taskflow-mern-iqas.onrender.com/api](https://taskflow-mern-iqas.onrender.com/api) |
+| Health Check | [https://taskflow-mern-iqas.onrender.com/health](https://taskflow-mern-iqas.onrender.com/health) |
 
 ## Overview
 
@@ -260,7 +271,9 @@ TaskFlow uses one backend API base endpoint for all frontend requests. The front
 | Local backend server | `http://localhost:5000` |
 | Local API base URL | `http://localhost:5000/api` |
 | Local health check | `http://localhost:5000/health` |
-| Production API base URL | `https://your-backend-url.com/api` |
+| Production backend server | `https://taskflow-mern-iqas.onrender.com` |
+| Production API base URL | `https://taskflow-mern-iqas.onrender.com/api` |
+| Production health check | `https://taskflow-mern-iqas.onrender.com/health` |
 
 For local development, keep this in `frontend/.env`:
 
@@ -426,7 +439,7 @@ Output directory: dist
 Environment:
 
 ```env
-VITE_API_BASE_URL=https://your-backend-url.com/api
+VITE_API_BASE_URL=https://taskflow-mern-iqas.onrender.com/api
 ```
 
 For Vercel, the project includes `frontend/vercel.json` with a single-page app rewrite. This keeps React Router routes working when users refresh or open pages like `/login`, `/signup`, `/tasks/:id`, or `/tasks/:id/edit` directly.
@@ -447,7 +460,7 @@ Environment:
 PORT=5000
 MONGO_URI=your_mongodb_atlas_uri
 NODE_ENV=production
-CLIENT_URL=https://your-frontend-url.com
+CLIENT_URL=https://taskflow-mern-two.vercel.app
 JWT_SECRET=your_super_secret_jwt_key
 LOG_LEVEL=info
 ```
