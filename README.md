@@ -123,8 +123,8 @@ The app is designed to feel like a real SaaS workspace rather than a tutorial pr
 | --- | --- |
 | Docker | Containerized local deployment |
 | Docker Compose | Full-stack orchestration |
-| Vercel / Netlify | Frontend deployment |
-| Render / Railway | Backend deployment |
+| Vercel | Frontend deployment |
+| Render | Backend deployment |
 | MongoDB Atlas | Production database |
 
 ## Project Structure
@@ -426,7 +426,7 @@ npm run build
 
 ### Frontend Deployment
 
-Deploy the `frontend` folder to Vercel or Netlify.
+Deploy the `frontend` folder to Vercel.
 
 Build settings:
 
@@ -446,7 +446,7 @@ For Vercel, the project includes `frontend/vercel.json` with a single-page app r
 
 ### Backend Deployment
 
-Deploy the `backend` folder to Render, Railway, Cyclic, or another Node hosting platform.
+Deploy the `backend` folder to Render.
 
 Start command:
 
