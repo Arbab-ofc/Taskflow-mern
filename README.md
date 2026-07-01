@@ -418,6 +418,7 @@ Deploy the `frontend` folder to Vercel or Netlify.
 Build settings:
 
 ```text
+Root directory: frontend
 Build command: npm run build
 Output directory: dist
 ```
@@ -427,6 +428,8 @@ Environment:
 ```env
 VITE_API_BASE_URL=https://your-backend-url.com/api
 ```
+
+For Vercel, the project includes `frontend/vercel.json` with a single-page app rewrite. This keeps React Router routes working when users refresh or open pages like `/login`, `/signup`, `/tasks/:id`, or `/tasks/:id/edit` directly.
 
 ### Backend Deployment
 
